@@ -1,10 +1,13 @@
 <div id="disqus_thread"></div>
 <script>
 
-    var disqus_shorname= 'redstarcomapny';
-    var disqus_identifier = '<%= @post.id %>';
-    var disqus_title = '<%= @post.title %>';
-    var disqus_url = '<%= url_for([@post, {only_path: false}]) %>';
+
+   var disqus_config = function () {
+       this.page.shorname = 'redstarcomapny';
+       this.page.url = '<%= url_for([@post, {only_path: false}]) %>';
+        this.page.identifier = '<%= @post.id %>';
+       this.page.title =  '<%= @post.title %>';
+    };
     /**
      *
 
