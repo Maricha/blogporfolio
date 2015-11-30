@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151130185251) do
+ActiveRecord::Schema.define(version: 20151130194641) do
 
   create_table "posts", force: true do |t|
     t.string   "title"
@@ -27,6 +27,9 @@ ActiveRecord::Schema.define(version: 20151130185251) do
     t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
+
+  add_index "projects", ["slug"], name: "index_projects_on_slug", unique: true
 
 end
