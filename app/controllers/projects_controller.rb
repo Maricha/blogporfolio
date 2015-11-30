@@ -12,6 +12,23 @@ class ProjectsController < ApplicationController
       @project = Project.new
     end
 
+
+    def edit
+    end
+
+    def update
+        if @project.update project_params
+          redirect_to @project, notice: "dobre"
+        else
+          render 'edit'
+        end
+    end
+
+    def destroy
+      @project.destroy
+      redirect_to projects_path
+    end
+
     def create
       @project = Project.new project_params
 
