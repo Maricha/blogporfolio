@@ -8,7 +8,7 @@ def headers
         {
 
           :subject => "Contact Form",
-           :to => "maricha177@gazeta.pl",
+           :to => "maricha177@gmail.com",
            :from => %("#{name}" <#{email}>)
         }
       end
