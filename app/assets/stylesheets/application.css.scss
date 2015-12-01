@@ -134,7 +134,11 @@ nav {
         }
 }
 
-
+.notice, .alert {
+  text-align: center;
+  padding: 1em 0px;
+  border-bottom: 1px solid rgb(233, 233, 233);
+}
 
 h1, h2, h3, h4, h5, h6, p, ul, li {
     color: $dark;

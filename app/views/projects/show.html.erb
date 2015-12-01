@@ -23,6 +23,17 @@
 
   </div>
 
+  <% if user_signed_in? %>
+         <div id="admin_links">
+
+            <%= link_to "Edit Article", edit_project_path(@project) %>
+            <%= link_to "Delete Article", project_path(@project), method: :delete, data: {cofirm: "Are you suer?"} %>
+
+
+         </div>
+        <% end %>
+
+
   <hr>
 
 
