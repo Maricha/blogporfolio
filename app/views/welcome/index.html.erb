@@ -2,7 +2,7 @@
 
         <div class="col-1 homepage_content about">
 
-                <h2>About</h2>
+                <h2>O co codzi?</h2>
                 <hr>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -18,7 +18,7 @@
 
         </div>
         <div class="col-2 homepage_content">
-                  <h2>Stuff I've written</h2>
+                  <h2>Napisane akrtykuły</h2>
                   <hr>
 
                   <% @posts.each do |post| %>
@@ -30,7 +30,7 @@
         </div>
 
         <div class="col-3 homepage_content">
-                  <h2>Stuff I've built</h2>
+                  <h2>Stworzone projekty</h2>
                   <hr>
                   <% @projects.each do |project| %>
                       <h3><a href="#"><%=link_to project.title, project %></a></h3>

@@ -17,12 +17,12 @@
         <%= link_to "Red Star Company", root_path, class: "name" %>
 
               <nav>
-                    <%= link_to "Articles", posts_path %>
+                    <%= link_to "Artykuły", posts_path %>
 
-                    <%= link_to "Projects", projects_path %>
-                    <%= link_to "Contact", new_contact_path %>
+                    <%= link_to "Projekty", projects_path %>
+                    <%= link_to "Kontakt", new_contact_path %>
                     <% if user_signed_in? %>
-                    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+                    <%= link_to "Wyloguj", destroy_user_session_path, method: :delete %>
                     <% end %>
               </nav>
 

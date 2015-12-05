@@ -1,9 +1,9 @@
-<h1 id="page_title">Say Hello!</h1>
+<h1 id="page_title">Cześć!</h1>
 
 <div class="wrapper_padding skinny_wrapper">
 <%= form_for @contact do |f| %>
-    <%= f.label :name %> <br />
-    <%= f.text_field :name, required: true %>
+    <%= f.label :nazwa %> <br />
+    <%= f.text_field :nazwa, required: true %>
 
     <br/>
 
@@ -12,16 +12,16 @@
 
     <br/>
 
-     <%= f.label :message %> <br />
-     <%= f.text_field :message, as: :text %>
+     <%= f.label :treść %> <br />
+     <%= f.text_field :treść, as: :text %>
 
      <div class="hidden">
        <%= f.label :nickname %> <br />
-      <%= f.text_field :nickname, hint: 'leave thid field blank' %>
+      <%= f.text_field :nickname, hint: 'pozostaw to puste' %>
 
       </div>
 
-      <%= f.submit 'Send Measage', class: "button" %>
+      <%= f.submit 'Wyśli wiadomość', class: "button" %>
 
 
 
