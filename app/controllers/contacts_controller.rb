@@ -14,4 +14,9 @@ class ContactsController < ApplicationController
     end
   end
 
+
+def contact
+    params.require(:contact).permit(:nazwa, :email, :message, :nickname)
+  end
+
 end

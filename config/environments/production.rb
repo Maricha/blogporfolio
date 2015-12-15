@@ -74,13 +74,22 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
+  #
+Rails.application.routes.default_url_options[:host] = 'http://redstarcompany.herokuapp.com/'
+config.action_mailer.default_url_options = { :host => 'http://redstarcompany.herokuapp.com/' }
 config.action_mailer.delivery_method = :smtp
+config.action_mailer.perform_deliveries = true
+config.action_mailer.raise_delivery_errors = false
+config.action_mailer.default :charset => "utf-8"
+
 config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                 587,
-  domain:               'gmail.com',
-  user_name:            'maricha177',
-  password:             'Marcin!123',
-  authentication:       'plain',
-  enable_starttls_auto: true  }
+address: "smtp.gmail.com",
+port: 465,
+domain: ENV["GMAIL_DOMAIN"],
+authentication: "plain",
+enable_starttls_auto: true,
+user_name: ENV["GMAIL_USERNAME"],
+password: ENV["GMAIL_PASSWORD"],
+}
+
 end

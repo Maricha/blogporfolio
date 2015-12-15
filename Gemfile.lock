@@ -46,6 +46,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.6.0)
+    foreman (0.78.0)
+      thor (~> 0.19.1)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     hike (1.2.3)
@@ -142,6 +144,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise (~> 3.4.1)
+  foreman
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.0)
   jquery-rails
